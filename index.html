@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Reservation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #ff7f50;
+            color: white;
+            padding: 20px 10%;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px 10%;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input, form textarea, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        form button {
+            background-color: #ff7f50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #ff6a33;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chef Reservation System</h1>
+        <p>Book a personal chef for your next special occasion!</p>
+    </header>
+    <main>
+        <section>
+            <h2>Make a Reservation</h2>
+            <form action="/submit" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                
+                <label for="event_date">Event Date</label>
+                <input type="date" id="event_date" name="event_date" required>
+                
+                <label for="service">Service Type</label>
+                <select id="service" name="service">
+                    <option value="private_dinner">Private Dinner</option>
+                    <option value="corporate_event">Corporate Event</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="details">Additional Details</label>
+                <textarea id="details" name="details" rows="4" placeholder="Enter any specific details or requests"></textarea>
+                
+                <button type="submit">Submit Reservation</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Chef Reservation System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
